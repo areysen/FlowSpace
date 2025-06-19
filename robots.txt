@@ -1,0 +1,35 @@
+# www.robotstxt.org/
+
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://flowspace.com/sitemap.xml
+
+# Disallow admin and utility paths
+Disallow: /admin/
+Disallow: /api/
+Disallow: /cdn-cgi/
+Disallow: /includes/
+Disallow: /temp/
+Disallow: /cgi-bin/
+
+# Allow CSS, JS, and Images
+Allow: /*.css$
+Allow: /*.js$
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.png$
+Allow: /*.gif$
+Allow: /*.svg$
+Allow: /*.webp$
+
+# Crawl-delay for specific bots
+User-agent: AhrefsBot
+Crawl-delay: 10
+
+User-agent: Baiduspider
+Crawl-delay: 10
+
+User-agent: Yandex
+Crawl-delay: 10 

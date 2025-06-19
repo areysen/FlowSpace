@@ -1,0 +1,2331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Security Headers -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+    <meta http-equiv="Permissions-Policy" content="interest-cohort=()">
+    
+    <!-- Primary Meta Tags -->
+    <title>FlowSpace - Project Management Reimagined | Modern Team Collaboration Platform</title>
+    <meta name="title" content="FlowSpace - Project Management Reimagined">
+    <meta name="description" content="Streamline your team's workflow with FlowSpace. The modern project management platform that adapts to how you work. Features include AI-powered task management, real-time collaboration, and advanced analytics.">
+    <meta name="keywords" content="project management, team collaboration, workflow automation, task management, agile tools, team productivity">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://flowspace.com">
+    <meta property="og:title" content="FlowSpace - Project Management Reimagined">
+    <meta property="og:description" content="Streamline your team's workflow with FlowSpace. The modern project management platform that adapts to how you work.">
+    <meta property="og:image" content="https://flowspace.com/og-image.jpg">
+    <meta property="og:site_name" content="FlowSpace">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://flowspace.com">
+    <meta name="twitter:title" content="FlowSpace - Project Management Reimagined">
+    <meta name="twitter:description" content="Streamline your team's workflow with FlowSpace. Modern project management platform.">
+    <meta name="twitter:image" content="https://flowspace.com/twitter-card.jpg">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://flowspace.com">
+    
+    <!-- Robots -->
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+    
+    <!-- Preconnect to required origins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    
+    <!-- Preload critical assets -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" as="style">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style">
+    
+    <!-- Fonts and Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Manifest and Icons -->
+    <link rel="manifest" href="/manifest.json">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <meta name="theme-color" content="#6366f1">
+    
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "FlowSpace",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web",
+      "offers": {
+        "@type": "AggregateOffer",
+        "priceCurrency": "USD",
+        "lowPrice": "9",
+        "highPrice": "29",
+        "offerCount": "3"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "reviewCount": "2500"
+      }
+    }
+    </script>
+    
+    <!-- Skip to main content link for accessibility -->
+    <style>
+        .skip-to-main {
+            position: absolute;
+            left: -9999px;
+            z-index: 999;
+            padding: 1em;
+            background-color: white;
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+        
+        .skip-to-main:focus {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        /* Screen reader only class */
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+        
+        /* Focus visible styles */
+        :focus-visible {
+            outline: 3px solid var(--primary-color);
+            outline-offset: 2px;
+        }
+        
+        /* High contrast mode styles */
+        @media (forced-colors: active) {
+            .button {
+                border: 2px solid currentColor;
+            }
+        }
+
+        /* CSS Variables */
+        :root {
+            --primary-color: #6366f1;
+            --secondary-color: #8b5cf6;
+            --accent-color: #06b6d4;
+            --text-primary: #1f2937;
+            --text-secondary: #6b7280;
+            --text-light: #9ca3af;
+            --bg-primary: #ffffff;
+            --bg-secondary: #f9fafb;
+            --bg-dark: #111827;
+            --border-color: #e5e7eb;
+            --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+            --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+            --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+            --gradient-primary: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            --gradient-accent: linear-gradient(135deg, var(--accent-color), var(--primary-color));
+            --border-radius: 12px;
+            --border-radius-lg: 16px;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text-primary);
+            background-color: var(--bg-primary);
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        .section {
+            padding: 6rem 0;
+        }
+
+        /* Typography */
+        .section__title {
+            font-size: clamp(2rem, 5vw, 3rem);
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .section__description {
+            font-size: 1.125rem;
+            color: var(--text-secondary);
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto 3rem;
+        }
+
+        .gradient-text {
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Buttons */
+        .button {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            border-radius: var(--border-radius);
+            font-weight: 600;
+            text-decoration: none;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .button--primary {
+            background: var(--gradient-primary);
+            color: white;
+            box-shadow: var(--shadow-md);
+        }
+
+        .button--primary:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .button--ghost {
+            background: transparent;
+            color: var(--text-primary);
+            border: 2px solid var(--border-color);
+        }
+
+        .button--ghost:hover {
+            background: var(--bg-secondary);
+            border-color: var(--primary-color);
+        }
+
+        .button--outline {
+            background: transparent;
+            color: var(--primary-color);
+            border: 2px solid var(--primary-color);
+        }
+
+        .button--outline:hover {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .button--large {
+            padding: 1rem 2rem;
+            font-size: 1.125rem;
+        }
+
+        /* Header */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border-color);
+            transition: var(--transition);
+        }
+
+        .header.scrolled {
+            background: rgba(255, 255, 255, 0.98);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem 0;
+        }
+
+        .nav__logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        .nav__logo i {
+            font-size: 1.75rem;
+        }
+
+        .nav__menu {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .nav__list {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav__link {
+            color: var(--text-primary);
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        .nav__link:hover {
+            color: var(--primary-color);
+        }
+
+        .nav__buttons {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .nav__button {
+            padding: 0.5rem 1rem;
+            border-radius: var(--border-radius);
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .nav__button--ghost {
+            color: var(--text-primary);
+        }
+
+        .nav__button--ghost:hover {
+            color: var(--primary-color);
+        }
+
+        .nav__button--primary {
+            background: var(--gradient-primary);
+            color: white;
+        }
+
+        .nav__button--primary:hover {
+            transform: translateY(-1px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .nav__toggle {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--text-primary);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 8rem 0 6rem;
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="%23e2e8f0" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+            opacity: 0.5;
+        }
+
+        .hero__container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero__title {
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero__description {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+
+        .hero__buttons {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .hero__stats {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .hero__stat {
+            text-align: center;
+        }
+
+        .hero__stat-number {
+            display: block;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        .hero__stat-label {
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+        }
+
+        .hero__image {
+            position: relative;
+        }
+
+        .dashboard-mockup {
+            background: white;
+            border-radius: var(--border-radius-lg);
+            box-shadow: var(--shadow-xl);
+            padding: 1.5rem;
+            transform: perspective(1000px) rotateY(-5deg) rotateX(5deg);
+            transition: var(--transition);
+        }
+
+        .dashboard-mockup:hover {
+            transform: perspective(1000px) rotateY(-2deg) rotateX(2deg);
+        }
+
+        .dashboard__header {
+            margin-bottom: 1.5rem;
+        }
+
+        .dashboard__tabs {
+            display: flex;
+            gap: 1rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .dashboard__tab {
+            padding: 0.5rem 1rem;
+            border-radius: var(--border-radius) var(--border-radius) 0 0;
+            font-size: 0.875rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .dashboard__tab.active {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .dashboard__card {
+            background: var(--bg-secondary);
+            border-radius: var(--border-radius);
+            padding: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .card__header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.75rem;
+        }
+
+        .card__header h3 {
+            font-size: 0.875rem;
+            font-weight: 600;
+        }
+
+        .card__status {
+            padding: 0.25rem 0.5rem;
+            border-radius: 6px;
+            font-size: 0.75rem;
+            font-weight: 500;
+        }
+
+        .card__status.in-progress {
+            background: #fef3c7;
+            color: #92400e;
+        }
+
+        .card__status.completed {
+            background: #d1fae5;
+            color: #065f46;
+        }
+
+        .card__progress {
+            margin-bottom: 0.75rem;
+        }
+
+        .progress__bar {
+            height: 6px;
+            background: var(--border-color);
+            border-radius: 3px;
+            overflow: hidden;
+            margin-bottom: 0.25rem;
+        }
+
+        .progress__fill {
+            height: 100%;
+            background: var(--gradient-primary);
+            border-radius: 3px;
+            transition: width 0.3s ease;
+        }
+
+        .progress__text {
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+        }
+
+        .card__team {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .team__avatars {
+            display: flex;
+            gap: -0.5rem;
+        }
+
+        .avatar {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background: var(--gradient-primary);
+            border: 2px solid white;
+        }
+
+        .team__count {
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+        }
+
+        .hero__scroll-indicator {
+            position: absolute;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: bounce 2s infinite;
+        }
+
+        .scroll__arrow {
+            width: 2px;
+            height: 30px;
+            background: var(--primary-color);
+            position: relative;
+        }
+
+        .scroll__arrow::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: -3px;
+            width: 8px;
+            height: 8px;
+            border-right: 2px solid var(--primary-color);
+            border-bottom: 2px solid var(--primary-color);
+            transform: rotate(45deg);
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateX(-50%) translateY(0);
+            }
+            40% {
+                transform: translateX(-50%) translateY(-10px);
+            }
+            60% {
+                transform: translateX(-50%) translateY(-5px);
+            }
+        }
+
+        /* Features Section */
+        .features {
+            background: var(--bg-primary);
+        }
+
+        .features__grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .feature__card {
+            background: white;
+            padding: 2rem;
+            border-radius: var(--border-radius-lg);
+            box-shadow: var(--shadow-md);
+            transition: var(--transition);
+            border: 1px solid var(--border-color);
+        }
+
+        .feature__card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .feature__icon {
+            width: 60px;
+            height: 60px;
+            background: var(--gradient-primary);
+            border-radius: var(--border-radius);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            color: white;
+            font-size: 1.5rem;
+        }
+
+        .feature__title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+
+        .feature__description {
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        /* Dashboard Preview */
+        .dashboard-preview {
+            background: var(--bg-secondary);
+        }
+
+        .dashboard-preview__content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .dashboard-preview__features {
+            list-style: none;
+            margin: 2rem 0;
+        }
+
+        .dashboard-preview__features li {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 1rem;
+            color: var(--text-secondary);
+        }
+
+        .dashboard-preview__features i {
+            color: var(--primary-color);
+            font-size: 1.125rem;
+        }
+
+        .dashboard-full {
+            background: white;
+            border-radius: var(--border-radius-lg);
+            box-shadow: var(--shadow-xl);
+            overflow: hidden;
+        }
+
+        .dashboard-full__header {
+            background: var(--bg-secondary);
+            padding: 1rem 1.5rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .dashboard-full__nav {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .nav-item {
+            padding: 0.5rem 1rem;
+            border-radius: var(--border-radius);
+            font-size: 0.875rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .nav-item.active {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .dashboard-full__content {
+            display: flex;
+            min-height: 400px;
+        }
+
+        .dashboard-full__sidebar {
+            width: 200px;
+            background: var(--bg-secondary);
+            padding: 1rem;
+            border-right: 1px solid var(--border-color);
+        }
+
+        .sidebar-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 0.75rem;
+            border-radius: var(--border-radius);
+            margin-bottom: 0.5rem;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .sidebar-item.active {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .dashboard-full__main {
+            flex: 1;
+            padding: 1.5rem;
+        }
+
+        .dashboard-full__cards {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .full-card {
+            background: var(--bg-secondary);
+            padding: 1rem;
+            border-radius: var(--border-radius);
+        }
+
+        .full-card__header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .full-card__header h4 {
+            font-size: 0.875rem;
+            font-weight: 600;
+        }
+
+        .full-card__number {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        .chart-bar {
+            width: 20px;
+            background: var(--gradient-primary);
+            border-radius: 2px;
+            margin: 0 2px;
+            display: inline-block;
+        }
+
+        .progress-ring {
+            width: 60px;
+            height: 60px;
+        }
+
+        .progress-ring svg {
+            width: 100%;
+            height: 100%;
+            transform: rotate(-90deg);
+        }
+
+        .progress-ring path:first-child {
+            fill: none;
+            stroke: var(--border-color);
+            stroke-width: 3;
+        }
+
+        .progress-ring path:last-child {
+            fill: none;
+            stroke: var(--primary-color);
+            stroke-width: 3;
+            stroke-dasharray: 100;
+            stroke-dashoffset: 13;
+            stroke-linecap: round;
+        }
+
+        .dashboard-full__table {
+            background: var(--bg-secondary);
+            border-radius: var(--border-radius);
+            padding: 1rem;
+        }
+
+        .table-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .table-header h4 {
+            font-size: 0.875rem;
+            font-weight: 600;
+        }
+
+        .table-button {
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 0.25rem 0.75rem;
+            border-radius: 6px;
+            font-size: 0.75rem;
+            cursor: pointer;
+        }
+
+        .table-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.75rem 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .table-row:last-child {
+            border-bottom: none;
+        }
+
+        .task-info {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .task-avatar {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: var(--gradient-primary);
+        }
+
+        .task-status {
+            padding: 0.25rem 0.5rem;
+            border-radius: 6px;
+            font-size: 0.75rem;
+            font-weight: 500;
+        }
+
+        .task-date {
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+        }
+
+        /* Pricing Section */
+        .pricing {
+            background: var(--bg-primary);
+        }
+
+        .pricing__toggle {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 3rem;
+        }
+
+        .toggle {
+            position: relative;
+            width: 60px;
+            height: 30px;
+        }
+
+        .toggle__input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .toggle__label {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: var(--border-color);
+            transition: var(--transition);
+            border-radius: 30px;
+        }
+
+        .toggle__label:before {
+            position: absolute;
+            content: "";
+            height: 24px;
+            width: 24px;
+            left: 3px;
+            bottom: 3px;
+            background-color: white;
+            transition: var(--transition);
+            border-radius: 50%;
+        }
+
+        .toggle__input:checked + .toggle__label {
+            background-color: var(--primary-color);
+        }
+
+        .toggle__input:checked + .toggle__label:before {
+            transform: translateX(30px);
+        }
+
+        .toggle__savings {
+            background: var(--accent-color);
+            color: white;
+            padding: 0.25rem 0.5rem;
+            border-radius: 6px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        .pricing__grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .pricing__card {
+            background: white;
+            border-radius: var(--border-radius-lg);
+            padding: 2rem;
+            box-shadow: var(--shadow-md);
+            border: 1px solid var(--border-color);
+            position: relative;
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .pricing__card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .pricing__card--popular {
+            border: 2px solid var(--primary-color);
+            transform: scale(1.05);
+        }
+
+        .pricing__badge {
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--gradient-primary);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            font-weight: 600;
+        }
+
+        .pricing__header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .pricing__title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .pricing__price {
+            margin-bottom: 1rem;
+        }
+
+        .price__amount {
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--primary-color);
+        }
+
+        .price__period {
+            font-size: 1rem;
+            color: var(--text-secondary);
+        }
+
+        .pricing__description {
+            color: var(--text-secondary);
+        }
+
+        .pricing__features {
+            list-style: none;
+            margin-bottom: 2rem;
+        }
+
+        .pricing__features li {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 1rem;
+            color: var(--text-secondary);
+        }
+
+        .pricing__features i {
+            color: var(--primary-color);
+        }
+
+        .pricing__button {
+            width: 100%;
+            justify-content: center;
+            margin-top: auto;
+        }
+
+        /* Testimonials */
+        .testimonials {
+            background: var(--bg-secondary);
+        }
+
+        .testimonials__grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .testimonial__card {
+            background: white;
+            padding: 2rem;
+            border-radius: var(--border-radius-lg);
+            box-shadow: var(--shadow-md);
+        }
+
+        .testimonial__content {
+            margin-bottom: 1.5rem;
+        }
+
+        .testimonial__content p {
+            font-style: italic;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        .testimonial__author {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .author__avatar {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+
+        .author__avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .author__info h4 {
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
+
+        .author__info span {
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+        }
+
+        .testimonials__logos {
+            text-align: center;
+        }
+
+        .logo__grid {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .logo__item {
+            font-weight: 600;
+            color: var(--text-secondary);
+            opacity: 0.7;
+        }
+
+        /* CTA Section */
+        .cta {
+            background: var(--gradient-primary);
+            color: white;
+            text-align: center;
+        }
+
+        .cta__title {
+            font-size: clamp(2rem, 5vw, 3rem);
+            font-weight: 800;
+            margin-bottom: 1rem;
+        }
+
+        .cta .gradient-text {
+            background: linear-gradient(135deg, #ffffff, #e2e8f0);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .cta__description {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .cta__buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .cta .button--primary {
+            background: white;
+            color: var(--primary-color);
+        }
+
+        .cta .button--ghost {
+            border-color: white;
+            color: white;
+        }
+
+        .cta .button--ghost:hover {
+            background: white;
+            color: var(--primary-color);
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--bg-dark);
+            color: white;
+            padding: 4rem 0 2rem;
+        }
+
+        .footer__content {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 4rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer__logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .footer__description {
+            color: #9ca3af;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .footer__social {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .social__link {
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .social__link:hover {
+            background: var(--primary-color);
+            transform: translateY(-2px);
+        }
+
+        .footer__links {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+        }
+
+        .footer__column h4 {
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .footer__column ul {
+            list-style: none;
+        }
+
+        .footer__column li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer__column a {
+            color: #9ca3af;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer__column a:hover {
+            color: white;
+        }
+
+        .footer__bottom {
+            border-top: 1px solid #374151;
+            padding-top: 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        .footer__newsletter h4 {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer__newsletter p {
+            color: #9ca3af;
+            margin-bottom: 1rem;
+        }
+
+        .newsletter__form {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .newsletter__input {
+            padding: 0.75rem 1rem;
+            border: 1px solid #374151;
+            border-radius: var(--border-radius);
+            background: transparent;
+            color: white;
+            flex: 1;
+        }
+
+        .newsletter__input::placeholder {
+            color: #9ca3af;
+        }
+
+        .newsletter__button {
+            padding: 0.75rem 1rem;
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .newsletter__button:hover {
+            background: var(--secondary-color);
+        }
+
+        .footer__copyright {
+            color: #9ca3af;
+        }
+
+        /* Animations */
+        [data-aos] {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        [data-aos].aos-animate {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav__menu {
+                position: fixed;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: white;
+                padding: 2rem;
+                box-shadow: var(--shadow-lg);
+                flex-direction: column;
+                gap: 1rem;
+                transform: translateY(-100%);
+                opacity: 0;
+                visibility: hidden;
+                transition: var(--transition);
+            }
+
+            .nav__menu.show {
+                transform: translateY(0);
+                opacity: 1;
+                visibility: visible;
+            }
+
+            .nav__list {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .nav__buttons {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .nav__toggle {
+                display: block;
+            }
+
+            .hero__container {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .hero__buttons {
+                justify-content: center;
+            }
+
+            .hero__stats {
+                justify-content: center;
+            }
+
+            .features__grid {
+                grid-template-columns: 1fr;
+            }
+
+            .dashboard-preview__content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .pricing__grid {
+                grid-template-columns: 1fr;
+            }
+
+            .pricing__card--popular {
+                transform: none;
+            }
+
+            .testimonials__grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer__content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .footer__links {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .footer__bottom {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .newsletter__form {
+                flex-direction: column;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 1rem;
+            }
+
+            .section {
+                padding: 4rem 0;
+            }
+
+            .hero {
+                padding: 6rem 0 4rem;
+            }
+
+            .hero__buttons {
+                flex-direction: column;
+            }
+
+            .cta__buttons {
+                flex-direction: column;
+            }
+
+            .footer__links {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="#main" class="skip-to-main">Skip to main content</a>
+    
+    <!-- Header/Navigation -->
+    <header class="header" id="header" role="banner">
+        <nav class="nav container" role="navigation" aria-label="Main navigation">
+            <div class="nav__logo">
+                <i class="fas fa-flow-branch" aria-hidden="true"></i>
+                <span>FlowSpace</span>
+            </div>
+            
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list" role="menubar">
+                    <li class="nav__item" role="none">
+                        <a href="#features" class="nav__link" role="menuitem" aria-current="page">Features</a>
+                    </li>
+                    <li class="nav__item" role="none">
+                        <a href="#pricing" class="nav__link" role="menuitem">Pricing</a>
+                    </li>
+                    <li class="nav__item" role="none">
+                        <a href="#about" class="nav__link" role="menuitem">About</a>
+                    </li>
+                    <li class="nav__item" role="none">
+                        <a href="#contact" class="nav__link" role="menuitem">Contact</a>
+                    </li>
+                </ul>
+                
+                <div class="nav__buttons">
+                    <a href="#" class="nav__button nav__button--ghost" role="button">Sign In</a>
+                    <a href="#pricing" class="nav__button nav__button--primary" role="button">Start Free Trial</a>
+                </div>
+            </div>
+            
+            <button class="nav__toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-menu">
+                <i class="fas fa-bars" aria-hidden="true"></i>
+                <span class="sr-only">Menu</span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main" role="main">
+        <!-- Hero Section -->
+        <section class="hero section" id="home" aria-labelledby="hero-title">
+            <div class="hero__container container">
+                <div class="hero__content">
+                    <h1 class="hero__title" id="hero-title">
+                        Project Management <span class="gradient-text">Reimagined</span>
+                    </h1>
+                    <p class="hero__description">
+                        Streamline your team's workflow with FlowSpace. The modern project management platform that adapts to how you work.
+                    </p>
+                    
+                    <div class="hero__buttons">
+                        <a href="#pricing" class="button button--primary" role="button">
+                            <span>Start Free Trial</span>
+                            <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                        </a>
+                        <a href="#demo" class="button button--ghost" role="button">
+                            <i class="fas fa-play" aria-hidden="true"></i>
+                            <span>Watch Demo</span>
+                        </a>
+                    </div>
+                    
+                    <div class="hero__stats" role="list">
+                        <div class="hero__stat" role="listitem">
+                            <span class="hero__stat-number" aria-label="Over fifty thousand active teams">50K+</span>
+                            <span class="hero__stat-label">Active Teams</span>
+                        </div>
+                        <div class="hero__stat" role="listitem">
+                            <span class="hero__stat-number" aria-label="Over two million projects">2M+</span>
+                            <span class="hero__stat-label">Projects</span>
+                        </div>
+                        <div class="hero__stat" role="listitem">
+                            <span class="hero__stat-number" aria-label="99.9 percent uptime">99.9%</span>
+                            <span class="hero__stat-label">Uptime</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="hero__image">
+                    <div class="dashboard-mockup">
+                        <div class="dashboard__header">
+                            <div class="dashboard__tabs">
+                                <div class="dashboard__tab active">Projects</div>
+                                <div class="dashboard__tab">Tasks</div>
+                                <div class="dashboard__tab">Analytics</div>
+                            </div>
+                        </div>
+                        <div class="dashboard__content">
+                            <div class="dashboard__card">
+                                <div class="card__header">
+                                    <h3>Website Redesign</h3>
+                                    <span class="card__status in-progress">In Progress</span>
+                                </div>
+                                <div class="card__progress">
+                                    <div class="progress__bar">
+                                        <div class="progress__fill" style="width: 75%"></div>
+                                    </div>
+                                    <span class="progress__text">75% Complete</span>
+                                </div>
+                                <div class="card__team">
+                                    <div class="team__avatars">
+                                        <div class="avatar"></div>
+                                        <div class="avatar"></div>
+                                        <div class="avatar"></div>
+                                    </div>
+                                    <span class="team__count">+3 members</span>
+                                </div>
+                            </div>
+                            <div class="dashboard__card">
+                                <div class="card__header">
+                                    <h3>Mobile App Launch</h3>
+                                    <span class="card__status completed">Completed</span>
+                                </div>
+                                <div class="card__progress">
+                                    <div class="progress__bar">
+                                        <div class="progress__fill" style="width: 100%"></div>
+                                    </div>
+                                    <span class="progress__text">100% Complete</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="hero__scroll-indicator">
+                <div class="scroll__arrow"></div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features section" id="features">
+            <div class="container">
+                <div class="section__header">
+                    <h2 class="section__title">Everything you need to <span class="gradient-text">succeed</span></h2>
+                    <p class="section__description">
+                        Powerful features designed to streamline your workflow and boost team productivity
+                    </p>
+                </div>
+                
+                <div class="features__grid">
+                    <div class="feature__card" data-aos="fade-up">
+                        <div class="feature__icon">
+                            <i class="fas fa-tasks"></i>
+                        </div>
+                        <h3 class="feature__title">Smart Task Management</h3>
+                        <p class="feature__description">
+                            AI-powered task prioritization and intelligent scheduling that adapts to your team's workflow.
+                        </p>
+                    </div>
+                    
+                    <div class="feature__card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="feature__icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3 class="feature__title">Real-time Collaboration</h3>
+                        <p class="feature__description">
+                            Live editing, instant updates, and seamless communication tools for your entire team.
+                        </p>
+                    </div>
+                    
+                    <div class="feature__card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="feature__icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3 class="feature__title">Advanced Analytics</h3>
+                        <p class="feature__description">
+                            Deep insights into team productivity, project performance, and resource allocation.
+                        </p>
+                    </div>
+                    
+                    <div class="feature__card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="feature__icon">
+                            <i class="fas fa-plug"></i>
+                        </div>
+                        <h3 class="feature__title">200+ Integrations</h3>
+                        <p class="feature__description">
+                            Connect with your favorite tools including Slack, GitHub, Jira, and many more.
+                        </p>
+                    </div>
+                    
+                    <div class="feature__card" data-aos="fade-up" data-aos-delay="400">
+                        <div class="feature__icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h3 class="feature__title">Mobile & Desktop</h3>
+                        <p class="feature__description">
+                            Work anywhere, anytime with our responsive web app and native mobile applications.
+                        </p>
+                    </div>
+                    
+                    <div class="feature__card" data-aos="fade-up" data-aos-delay="500">
+                        <div class="feature__icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3 class="feature__title">Enterprise Security</h3>
+                        <p class="feature__description">
+                            Bank-level encryption, compliance certifications, and enterprise-grade security features.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dashboard Preview Section -->
+        <section class="dashboard-preview section" id="demo">
+            <div class="container">
+                <div class="dashboard-preview__content">
+                    <div class="dashboard-preview__text">
+                        <h2 class="section__title">See FlowSpace in <span class="gradient-text">action</span></h2>
+                        <p class="section__description">
+                            Experience the intuitive interface that makes project management feel effortless. 
+                            Our dashboard adapts to your workflow, not the other way around.
+                        </p>
+                        <ul class="dashboard-preview__features">
+                            <li><i class="fas fa-check"></i> Drag & drop task management</li>
+                            <li><i class="fas fa-check"></i> Real-time team collaboration</li>
+                            <li><i class="fas fa-check"></i> Advanced reporting & analytics</li>
+                            <li><i class="fas fa-check"></i> Customizable workflows</li>
+                        </ul>
+                        <a href="#pricing" class="button button--primary">
+                            <span>Try It Free</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                    
+                    <div class="dashboard-preview__image">
+                        <div class="dashboard-full">
+                            <div class="dashboard-full__header">
+                                <div class="dashboard-full__nav">
+                                    <div class="nav-item active">Overview</div>
+                                    <div class="nav-item">Projects</div>
+                                    <div class="nav-item">Tasks</div>
+                                    <div class="nav-item">Team</div>
+                                    <div class="nav-item">Reports</div>
+                                </div>
+                            </div>
+                            <div class="dashboard-full__content">
+                                <div class="dashboard-full__sidebar">
+                                    <div class="sidebar-item active">
+                                        <i class="fas fa-home"></i>
+                                        <span>Dashboard</span>
+                                    </div>
+                                    <div class="sidebar-item">
+                                        <i class="fas fa-project-diagram"></i>
+                                        <span>Projects</span>
+                                    </div>
+                                    <div class="sidebar-item">
+                                        <i class="fas fa-tasks"></i>
+                                        <span>Tasks</span>
+                                    </div>
+                                    <div class="sidebar-item">
+                                        <i class="fas fa-users"></i>
+                                        <span>Team</span>
+                                    </div>
+                                </div>
+                                <div class="dashboard-full__main">
+                                    <div class="dashboard-full__cards">
+                                        <div class="full-card">
+                                            <div class="full-card__header">
+                                                <h4>Active Projects</h4>
+                                                <span class="full-card__number">12</span>
+                                            </div>
+                                            <div class="full-card__chart">
+                                                <div class="chart-bar" style="height: 60%"></div>
+                                                <div class="chart-bar" style="height: 80%"></div>
+                                                <div class="chart-bar" style="height: 45%"></div>
+                                                <div class="chart-bar" style="height: 90%"></div>
+                                            </div>
+                                        </div>
+                                        <div class="full-card">
+                                            <div class="full-card__header">
+                                                <h4>Team Productivity</h4>
+                                                <span class="full-card__number">87%</span>
+                                            </div>
+                                            <div class="full-card__progress">
+                                                <div class="progress-ring">
+                                                    <svg viewBox="0 0 36 36">
+                                                        <path d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                                                        <path d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="dashboard-full__table">
+                                        <div class="table-header">
+                                            <h4>Recent Tasks</h4>
+                                            <button class="table-button">View All</button>
+                                        </div>
+                                        <div class="table-content">
+                                            <div class="table-row">
+                                                <div class="table-cell">
+                                                    <div class="task-info">
+                                                        <div class="task-avatar"></div>
+                                                        <span>Design System Update</span>
+                                                    </div>
+                                                </div>
+                                                <div class="table-cell">
+                                                    <span class="task-status in-progress">In Progress</span>
+                                                </div>
+                                                <div class="table-cell">
+                                                    <span class="task-date">Due Today</span>
+                                                </div>
+                                            </div>
+                                            <div class="table-row">
+                                                <div class="table-cell">
+                                                    <div class="task-info">
+                                                        <div class="task-avatar"></div>
+                                                        <span>API Documentation</span>
+                                                    </div>
+                                                </div>
+                                                <div class="table-cell">
+                                                    <span class="task-status completed">Completed</span>
+                                                </div>
+                                                <div class="table-cell">
+                                                    <span class="task-date">Yesterday</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing Section -->
+        <section class="pricing section" id="pricing">
+            <div class="container">
+                <div class="section__header">
+                    <h2 class="section__title">Simple, transparent <span class="gradient-text">pricing</span></h2>
+                    <p class="section__description">
+                        Choose the plan that's right for your team. All plans include a 14-day free trial.
+                    </p>
+                </div>
+                
+                <div class="pricing__toggle">
+                    <span>Monthly</span>
+                    <div class="toggle">
+                        <input type="checkbox" id="pricing-toggle" class="toggle__input">
+                        <label for="pricing-toggle" class="toggle__label"></label>
+                    </div>
+                    <span>Yearly <span class="toggle__savings">Save 20%</span></span>
+                </div>
+                
+                <div class="pricing__grid">
+                    <div class="pricing__card" data-aos="fade-up">
+                        <div class="pricing__header">
+                            <h3 class="pricing__title">Starter</h3>
+                            <div class="pricing__price">
+                                <span class="price__amount">$9</span>
+                                <span class="price__period">/month</span>
+                            </div>
+                            <p class="pricing__description">Perfect for small teams getting started</p>
+                        </div>
+                        
+                        <ul class="pricing__features">
+                            <li><i class="fas fa-check"></i> 5 team members</li>
+                            <li><i class="fas fa-check"></i> 10 projects</li>
+                            <li><i class="fas fa-check"></i> Basic task management</li>
+                            <li><i class="fas fa-check"></i> Email support</li>
+                            <li><i class="fas fa-check"></i> Mobile app access</li>
+                        </ul>
+                        
+                        <a href="#" class="button button--outline pricing__button">Start Free Trial</a>
+                    </div>
+                    
+                    <div class="pricing__card pricing__card--popular" data-aos="fade-up" data-aos-delay="100">
+                        <div class="pricing__badge">Most Popular</div>
+                        <div class="pricing__header">
+                            <h3 class="pricing__title">Professional</h3>
+                            <div class="pricing__price">
+                                <span class="price__amount">$29</span>
+                                <span class="price__period">/month</span>
+                            </div>
+                            <p class="pricing__description">For growing teams that need more power</p>
+                        </div>
+                        
+                        <ul class="pricing__features">
+                            <li><i class="fas fa-check"></i> 50 team members</li>
+                            <li><i class="fas fa-check"></i> Unlimited projects</li>
+                            <li><i class="fas fa-check"></i> Advanced analytics</li>
+                            <li><i class="fas fa-check"></i> Priority support</li>
+                            <li><i class="fas fa-check"></i> Custom integrations</li>
+                            <li><i class="fas fa-check"></i> Time tracking</li>
+                            <li><i class="fas fa-check"></i> Advanced reporting</li>
+                        </ul>
+                        
+                        <a href="#" class="button button--primary pricing__button">Start Free Trial</a>
+                    </div>
+                    
+                    <div class="pricing__card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="pricing__header">
+                            <h3 class="pricing__title">Enterprise</h3>
+                            <div class="pricing__price">
+                                <span class="price__amount">Custom</span>
+                                <span class="price__period">/month</span>
+                            </div>
+                            <p class="pricing__description">For large organizations with specific needs</p>
+                        </div>
+                        
+                        <ul class="pricing__features">
+                            <li><i class="fas fa-check"></i> Unlimited team members</li>
+                            <li><i class="fas fa-check"></i> Unlimited everything</li>
+                            <li><i class="fas fa-check"></i> Custom integrations</li>
+                            <li><i class="fas fa-check"></i> Dedicated support</li>
+                            <li><i class="fas fa-check"></i> SSO & advanced security</li>
+                            <li><i class="fas fa-check"></i> Custom workflows</li>
+                            <li><i class="fas fa-check"></i> API access</li>
+                        </ul>
+                        
+                        <a href="#" class="button button--outline pricing__button">Contact Sales</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="testimonials section">
+            <div class="container">
+                <div class="section__header">
+                    <h2 class="section__title">Loved by teams <span class="gradient-text">worldwide</span></h2>
+                    <p class="section__description">
+                        See what our customers have to say about FlowSpace
+                    </p>
+                </div>
+                
+                <div class="testimonials__grid">
+                    <div class="testimonial__card" data-aos="fade-up">
+                        <div class="testimonial__content">
+                            <p>"FlowSpace has completely transformed how our team collaborates. The intuitive interface and powerful features have increased our productivity by 40%."</p>
+                        </div>
+                        <div class="testimonial__author">
+                            <div class="author__avatar">
+                                <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?w=60&h=60&fit=crop&crop=face" alt="Sarah Johnson">
+                            </div>
+                            <div class="author__info">
+                                <h4>Sarah Johnson</h4>
+                                <span>Product Manager, TechCorp</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial__card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="testimonial__content">
+                            <p>"The analytics and reporting features give us insights we never had before. It's like having a crystal ball for project management."</p>
+                        </div>
+                        <div class="testimonial__author">
+                            <div class="author__avatar">
+                                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=60&h=60&fit=crop&crop=face" alt="Michael Chen">
+                            </div>
+                            <div class="author__info">
+                                <h4>Michael Chen</h4>
+                                <span>CTO, StartupXYZ</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial__card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="testimonial__content">
+                            <p>"Finally, a project management tool that doesn't get in the way. FlowSpace adapts to our workflow instead of forcing us to change."</p>
+                        </div>
+                        <div class="testimonial__author">
+                            <div class="author__avatar">
+                                <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=60&h=60&fit=crop&crop=face" alt="Emily Rodriguez">
+                            </div>
+                            <div class="author__info">
+                                <h4>Emily Rodriguez</h4>
+                                <span>Design Lead, CreativeStudio</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonials__logos">
+                    <div class="logo__grid">
+                        <div class="logo__item">TechCorp</div>
+                        <div class="logo__item">StartupXYZ</div>
+                        <div class="logo__item">CreativeStudio</div>
+                        <div class="logo__item">InnovateLab</div>
+                        <div class="logo__item">FutureTech</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta section">
+            <div class="container">
+                <div class="cta__content">
+                    <h2 class="cta__title">Ready to transform your <span class="gradient-text">workflow</span>?</h2>
+                    <p class="cta__description">
+                        Join thousands of teams already using FlowSpace to streamline their project management.
+                    </p>
+                    <div class="cta__buttons">
+                        <a href="#pricing" class="button button--primary button--large">
+                            <span>Start Free Trial</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                        <a href="#contact" class="button button--ghost button--large">
+                            <span>Schedule Demo</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" id="contact">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__brand">
+                    <div class="footer__logo">
+                        <i class="fas fa-flow-branch"></i>
+                        <span>FlowSpace</span>
+                    </div>
+                    <p class="footer__description">
+                        The modern project management platform that adapts to how you work.
+                    </p>
+                    <div class="footer__social">
+                        <a href="#" class="social__link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social__link"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social__link"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer__links">
+                    <div class="footer__column">
+                        <h4>Product</h4>
+                        <ul>
+                            <li><a href="#features">Features</a></li>
+                            <li><a href="#pricing">Pricing</a></li>
+                            <li><a href="#demo">Demo</a></li>
+                            <li><a href="#">API</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer__column">
+                        <h4>Company</h4>
+                        <ul>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer__column">
+                        <h4>Support</h4>
+                        <ul>
+                            <li><a href="#">Help Center</a></li>
+                            <li><a href="#">Documentation</a></li>
+                            <li><a href="#">Community</a></li>
+                            <li><a href="#">Status</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer__column">
+                        <h4>Legal</h4>
+                        <ul>
+                            <li><a href="#">Privacy</a></li>
+                            <li><a href="#">Terms</a></li>
+                            <li><a href="#">Security</a></li>
+                            <li><a href="#">Compliance</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer__bottom">
+                <div class="footer__newsletter">
+                    <h4>Stay updated</h4>
+                    <p>Get the latest news and updates from FlowSpace</p>
+                    <form class="newsletter__form">
+                        <input type="email" placeholder="Enter your email" class="newsletter__input">
+                        <button type="submit" class="newsletter__button">
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </form>
+                </div>
+                
+                <div class="footer__copyright">
+                    <p>&copy; 2024 FlowSpace. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Performance optimization: Use passive event listeners where possible
+        const supportsPassive = (() => {
+            let passiveSupported = false;
+            try {
+                document.createElement("div").addEventListener("test", null, {
+                    get passive() { passiveSupported = true; return false; }
+                });
+            } catch(e) {}
+            return passiveSupported;
+        })();
+        
+        const listenerOptions = supportsPassive ? { passive: true } : false;
+        
+        // Debounce function for performance optimization
+        function debounce(func, wait) {
+            let timeout;
+            return function executedFunction(...args) {
+                const later = () => {
+                    clearTimeout(timeout);
+                    func(...args);
+                };
+                clearTimeout(timeout);
+                timeout = setTimeout(later, wait);
+            };
+        }
+        
+        // Mobile Menu Toggle with accessibility
+        const navToggle = document.getElementById('nav-toggle');
+        const navMenu = document.getElementById('nav-menu');
+        
+        function toggleMenu() {
+            const isExpanded = navToggle.getAttribute('aria-expanded') === 'true';
+            navToggle.setAttribute('aria-expanded', !isExpanded);
+            navMenu.classList.toggle('show');
+            
+            // Trap focus within menu when open
+            if (!isExpanded) {
+                const focusableElements = navMenu.querySelectorAll(
+                    'a[href], button, input, textarea, select, [tabindex]:not([tabindex="-1"])'
+                );
+                const firstFocusable = focusableElements[0];
+                const lastFocusable = focusableElements[focusableElements.length - 1];
+                
+                function trapFocus(e) {
+                    if (e.key === 'Tab') {
+                        if (e.shiftKey && document.activeElement === firstFocusable) {
+                            e.preventDefault();
+                            lastFocusable.focus();
+                        } else if (!e.shiftKey && document.activeElement === lastFocusable) {
+                            e.preventDefault();
+                            firstFocusable.focus();
+                        }
+                    }
+                    
+                    if (e.key === 'Escape') {
+                        closeMenu();
+                    }
+                }
+                
+                navMenu.addEventListener('keydown', trapFocus);
+            }
+        }
+        
+        function closeMenu() {
+            navToggle.setAttribute('aria-expanded', 'false');
+            navMenu.classList.remove('show');
+            navToggle.focus();
+        }
+        
+        navToggle.addEventListener('click', toggleMenu);
+        
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav__link').forEach(link => {
+            link.addEventListener('click', () => {
+                closeMenu();
+            });
+        });
+        
+        // Header scroll effect with performance optimization
+        const header = document.getElementById('header');
+        const scrollHandler = debounce(() => {
+            if (window.scrollY > 100) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        }, 10);
+        
+        window.addEventListener('scroll', scrollHandler, listenerOptions);
+        
+        // Smooth scrolling for navigation links with keyboard support
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const headerHeight = header.offsetHeight;
+                    const targetPosition = target.offsetTop - headerHeight;
+                    
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Set focus to the target element
+                    target.setAttribute('tabindex', '-1');
+                    target.focus({ preventScroll: true });
+                }
+            });
+        });
+        
+        // Intersection Observer with performance optimization
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('aos-animate');
+                    // Unobserve after animation to save resources
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+        
+        // Observe all elements with data-aos attribute
+        document.querySelectorAll('[data-aos]').forEach(el => {
+            observer.observe(el);
+        });
+        
+        // Pricing toggle with accessibility
+        const pricingToggle = document.getElementById('pricing-toggle');
+        const priceAmounts = document.querySelectorAll('.price__amount');
+        const pricePeriods = document.querySelectorAll('.price__period');
+        
+        const monthlyPrices = ['$9', '$29', 'Custom'];
+        const yearlyPrices = ['$7', '$23', 'Custom'];
+        const monthlyPeriods = ['/month', '/month', '/month'];
+        const yearlyPeriods = ['/month', '/month', '/month'];
+        
+        function updatePrices(isYearly) {
+            const prices = isYearly ? yearlyPrices : monthlyPrices;
+            const periods = isYearly ? yearlyPeriods : monthlyPeriods;
+            
+            priceAmounts.forEach((amount, index) => {
+                if (prices[index]) {
+                    amount.textContent = prices[index];
+                    // Announce price change to screen readers
+                    amount.setAttribute('aria-label', 
+                        `${prices[index]} ${periods[index].replace('/', ' per ')}`
+                    );
+                }
+            });
+            
+            // Announce billing period change to screen readers
+            const announcement = document.createElement('div');
+            announcement.setAttribute('aria-live', 'polite');
+            announcement.classList.add('sr-only');
+            announcement.textContent = `Prices updated to ${isYearly ? 'yearly' : 'monthly'} billing`;
+            document.body.appendChild(announcement);
+            
+            setTimeout(() => {
+                document.body.removeChild(announcement);
+            }, 1000);
+        }
+        
+        pricingToggle.addEventListener('change', (e) => {
+            updatePrices(e.target.checked);
+        });
+        
+        // Form validation and submission with accessibility
+        const newsletterForm = document.querySelector('.newsletter__form');
+        if (newsletterForm) {
+            const emailInput = newsletterForm.querySelector('.newsletter__input');
+            const submitButton = newsletterForm.querySelector('.newsletter__button');
+            
+            function validateEmail(email) {
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                return emailRegex.test(email);
+            }
+            
+            emailInput.addEventListener('input', (e) => {
+                const email = e.target.value;
+                const isValid = validateEmail(email);
+                
+                emailInput.setAttribute('aria-invalid', !isValid);
+                if (email && !isValid) {
+                    emailInput.style.borderColor = '#ef4444';
+                    // Add error message for screen readers
+                    if (!emailInput.nextElementSibling?.classList.contains('error-message')) {
+                        const errorMessage = document.createElement('div');
+                        errorMessage.classList.add('error-message', 'sr-only');
+                        errorMessage.setAttribute('aria-live', 'polite');
+                        errorMessage.textContent = 'Please enter a valid email address';
+                        emailInput.parentNode.insertBefore(errorMessage, emailInput.nextSibling);
+                    }
+                } else {
+                    emailInput.style.borderColor = '#374151';
+                    // Remove error message if exists
+                    const errorMessage = emailInput.nextElementSibling;
+                    if (errorMessage?.classList.contains('error-message')) {
+                        errorMessage.remove();
+                    }
+                }
+            });
+            
+            newsletterForm.addEventListener('submit', async (e) => {
+                e.preventDefault();
+                const email = emailInput.value;
+                
+                if (validateEmail(email)) {
+                    submitButton.disabled = true;
+                    submitButton.setAttribute('aria-busy', 'true');
+                    const originalContent = submitButton.innerHTML;
+                    submitButton.innerHTML = '<i class="fas fa-circle-notch fa-spin"></i>';
+                    
+                    try {
+                        // Simulate API call
+                        await new Promise(resolve => setTimeout(resolve, 1000));
+                        
+                        // Show success message
+                        submitButton.innerHTML = '<i class="fas fa-check"></i>';
+                        submitButton.style.background = '#10b981';
+                        
+                        // Announce success to screen readers
+                        const successMessage = document.createElement('div');
+                        successMessage.setAttribute('aria-live', 'polite');
+                        successMessage.classList.add('sr-only');
+                        successMessage.textContent = 'Successfully subscribed to newsletter';
+                        document.body.appendChild(successMessage);
+                        
+                        setTimeout(() => {
+                            submitButton.disabled = false;
+                            submitButton.removeAttribute('aria-busy');
+                            submitButton.innerHTML = originalContent;
+                            submitButton.style.background = '';
+                            emailInput.value = '';
+                            document.body.removeChild(successMessage);
+                        }, 2000);
+                    } catch (error) {
+                        // Handle error
+                        submitButton.innerHTML = '<i class="fas fa-exclamation-triangle"></i>';
+                        submitButton.style.background = '#ef4444';
+                        
+                        // Announce error to screen readers
+                        const errorMessage = document.createElement('div');
+                        errorMessage.setAttribute('aria-live', 'assertive');
+                        errorMessage.classList.add('sr-only');
+                        errorMessage.textContent = 'Failed to subscribe. Please try again.';
+                        document.body.appendChild(errorMessage);
+                        
+                        setTimeout(() => {
+                            submitButton.disabled = false;
+                            submitButton.removeAttribute('aria-busy');
+                            submitButton.innerHTML = originalContent;
+                            submitButton.style.background = '';
+                            document.body.removeChild(errorMessage);
+                        }, 2000);
+                    }
+                }
+            });
+        }
+        
+        // Initialize the page with performance optimizations
+        document.addEventListener('DOMContentLoaded', () => {
+            // Add loading animation
+            document.body.style.opacity = '0';
+            document.body.style.transition = 'opacity 0.5s ease';
+            
+            // Use requestAnimationFrame for smooth animation
+            requestAnimationFrame(() => {
+                document.body.style.opacity = '1';
+            });
+            
+            // Initialize lazy loading for images
+            const lazyImages = document.querySelectorAll('img[loading="lazy"]');
+            if ('loading' in HTMLImageElement.prototype) {
+                // Browser supports native lazy loading
+                lazyImages.forEach(img => {
+                    img.setAttribute('loading', 'lazy');
+                });
+            } else {
+                // Fallback for browsers that don't support lazy loading
+                const lazyImageObserver = new IntersectionObserver((entries, observer) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            const img = entry.target;
+                            img.src = img.dataset.src;
+                            img.removeAttribute('data-src');
+                            observer.unobserve(img);
+                        }
+                    });
+                });
+                
+                lazyImages.forEach(img => {
+                    lazyImageObserver.observe(img);
+                });
+            }
+        });
+        
+        // Add error boundary
+        window.addEventListener('error', function(e) {
+            console.error('Runtime error:', e);
+            // Log to analytics or error tracking service
+        });
+        
+        // Add performance monitoring
+        if ('performance' in window) {
+            window.addEventListener('load', () => {
+                setTimeout(() => {
+                    const perfData = window.performance.timing;
+                    const pageLoadTime = perfData.loadEventEnd - perfData.navigationStart;
+                    console.log('Page load time:', pageLoadTime);
+                    // Log to analytics
+                }, 0);
+            });
+        }
+    </script>
+</body>
+</html> 

@@ -6,7 +6,7 @@
 
     <!-- Homepage -->
     <url>
-        <loc>https://flowspace.com/</loc>
+        <loc>https://flowspace-app.netlify.app/</loc>
         <lastmod>2024-03-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
@@ -14,7 +14,7 @@
 
     <!-- Features Section -->
     <url>
-        <loc>https://flowspace.com/#features</loc>
+        <loc>https://flowspace-app.netlify.app/#features</loc>
         <lastmod>2024-03-19</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
@@ -22,7 +22,7 @@
 
     <!-- Pricing Section -->
     <url>
-        <loc>https://flowspace.com/#pricing</loc>
+        <loc>https://flowspace-app.netlify.app/#pricing</loc>
         <lastmod>2024-03-19</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
@@ -30,7 +30,7 @@
 
     <!-- About Section -->
     <url>
-        <loc>https://flowspace.com/#about</loc>
+        <loc>https://flowspace-app.netlify.app/#about</loc>
         <lastmod>2024-03-19</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
@@ -38,7 +38,7 @@
 
     <!-- Contact Section -->
     <url>
-        <loc>https://flowspace.com/#contact</loc>
+        <loc>https://flowspace-app.netlify.app/#contact</loc>
         <lastmod>2024-03-19</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
@@ -46,14 +46,14 @@
 
     <!-- Legal Pages -->
     <url>
-        <loc>https://flowspace.com/privacy-policy</loc>
+        <loc>https://flowspace-app.netlify.app/privacy-policy</loc>
         <lastmod>2024-03-19</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
     </url>
 
     <url>
-        <loc>https://flowspace.com/terms-of-service</loc>
+        <loc>https://flowspace-app.netlify.app/terms-of-service</loc>
         <lastmod>2024-03-19</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
@@ -61,7 +61,7 @@
 
     <!-- Blog Section (if available) -->
     <url>
-        <loc>https://flowspace.com/blog</loc>
+        <loc>https://flowspace-app.netlify.app/blog</loc>
         <lastmod>2024-03-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -69,7 +69,7 @@
 
     <!-- Resources Section (if available) -->
     <url>
-        <loc>https://flowspace.com/resources</loc>
+        <loc>https://flowspace-app.netlify.app/resources</loc>
         <lastmod>2024-03-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>

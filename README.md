@@ -2,6 +2,10 @@
 
 A modern, accessible, and performant SaaS landing page for FlowSpace, a project management platform that helps teams streamline their workflow.
 
+## 🌐 Live Site
+
+**Visit the live site**: [https://flowspace-app.netlify.app](https://flowspace-app.netlify.app)
+
 ## Features
 
 - 🎨 Modern, responsive design with smooth animations
@@ -24,7 +28,7 @@ A modern, accessible, and performant SaaS landing page for FlowSpace, a project 
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/yourusername/flowspace.git
+git clone https://github.com/areysen/flowspace.git
 cd flowspace
 ```
 

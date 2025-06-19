@@ -2,6 +2,11 @@
 
 This document provides detailed instructions for deploying the FlowSpace landing page to various environments.
 
+## Current Deployment
+
+The FlowSpace landing page is currently deployed on **Netlify** at:
+**https://flowspace-app.netlify.app**
+
 ## Prerequisites
 
 - Node.js (v14 or higher) for build tools
@@ -14,7 +19,7 @@ This document provides detailed instructions for deploying the FlowSpace landing
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/yourusername/flowspace.git
+git clone https://github.com/areysen/flowspace.git
 cd flowspace
 ```
 
@@ -34,7 +39,26 @@ python -m http.server 8000
 
 ## Production Deployment
 
-### 1. Build Process
+### 1. Netlify Deployment (Current)
+
+The site is deployed on Netlify with the following configuration:
+
+- **Site URL**: https://flowspace-app.netlify.app
+- **Repository**: https://github.com/areysen/flowspace
+- **Build Command**: None (static site)
+- **Publish Directory**: `./` (root directory)
+- **Branch**: main
+
+#### Netlify Features Enabled:
+
+- Automatic HTTPS
+- Global CDN
+- Automatic deployments on git push
+- Custom domain support (if needed)
+- Form handling
+- Redirects and rewrites
+
+### 2. Build Process
 
 1. Optimize images:
 
@@ -57,16 +81,7 @@ npx cleancss -o ./dist/styles.min.css ./styles.css
 npx terser ./script.js -o ./dist/script.min.js -c -m
 ```
 
-### 2. Static Hosting (Recommended)
-
-#### Netlify
-
-1. Connect your GitHub repository to Netlify
-2. Configure build settings:
-   - Build command: `npm run build` (if using build tools)
-   - Publish directory: `./` or `./dist`
-3. Configure custom domain (optional)
-4. Enable HTTPS
+### 3. Alternative Static Hosting
 
 #### Vercel
 
@@ -82,7 +97,7 @@ npx terser ./script.js -o ./dist/script.min.js -c -m
 3. Select branch and directory
 4. Configure custom domain (optional)
 
-### 3. Traditional Web Hosting
+### 4. Traditional Web Hosting
 
 1. Upload files via FTP/SFTP:
 

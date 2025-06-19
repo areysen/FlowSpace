@@ -4,7 +4,7 @@ User-agent: *
 Allow: /
 
 # Sitemaps
-Sitemap: https://flowspace.com/sitemap.xml
+Sitemap: https://flowspace-app.netlify.app/sitemap.xml
 
 # Disallow admin and utility paths
 Disallow: /admin/
